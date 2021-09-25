@@ -8,8 +8,8 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
 	public class Triangle : Polygon
 	{
-		private double _aSide;
-		public double A_Side
+		private double _aSide; // encapsulation principle
+		public double A_Side // using accessors (properties) for having an access to private filed
 		{
 			get { return _aSide; }
 			set { _bSide = value; }
@@ -29,13 +29,24 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 			set { _cSide = value; }
 		}
 
-		public Triangle(double a, double b, double c)
+
+		static Triangle() // static ctor
+		{
+
+		}
+
+		public Triangle() // a parameterized ctor
+		{
+
+		}
+
+		public Triangle(double a, double b, double c) // a parameterized ctor
 		{
 			_aSide = a;
 			_bSide = b;
 			_cSide = c;
 		}
 
-		public override double Square { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+		public override double SquareOfFigure { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 	}
 }

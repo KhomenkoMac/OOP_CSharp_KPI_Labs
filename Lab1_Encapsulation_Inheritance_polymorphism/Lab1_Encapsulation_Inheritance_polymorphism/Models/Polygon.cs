@@ -8,6 +8,6 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
 	public abstract class Polygon
 	{
-		public abstract double Square { get; set; }
+		public abstract double SquareOfFigure { get; set; }
 	}
 }

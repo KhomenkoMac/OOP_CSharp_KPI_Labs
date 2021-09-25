@@ -2,7 +2,7 @@
 {
 	public class Rectangle : Polygon
 	{
-		public override double Square { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+		public override double SquareOfFigure { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 	}
 
 }
