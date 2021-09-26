@@ -1,4 +1,6 @@
-﻿namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
+﻿using System;
+
+namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
 	public class Rectangle : Polygon
 	{
@@ -30,6 +32,7 @@
 
 		public Rectangle(double aSide, double bSide)
 		{
+			Console.WriteLine($"{nameof(Rectangle)} -> base ctor executed");
 			_aSide = aSide;
 			_bSide = bSide;
 		}
