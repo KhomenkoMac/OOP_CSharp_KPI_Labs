@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Polygon" Collapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAACAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Polygon.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Parallelogram">
+    <Position X="7.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Parallelogram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Rectangle">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACACgAAAAAAAAAAAAAAAAAAAAAAABAEAAAAEAACAA=</HashCode>
+      <FileName>Models\Rectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Square">
+    <Position X="5.25" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Triangle">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACgAACAAAAAAAAAAAAgAAFAEAABAEAAAACAACAA=</HashCode>
+      <FileName>Models\Triangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

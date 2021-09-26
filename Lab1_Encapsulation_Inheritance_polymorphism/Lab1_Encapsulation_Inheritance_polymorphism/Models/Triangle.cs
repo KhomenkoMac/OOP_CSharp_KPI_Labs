@@ -2,7 +2,7 @@
 
 namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
-	public class Triangle : Polygon, IDisposable
+	public class Triangle : Polygon
 	{
 		private double _aSide; // encapsulation principle
 		public double A_Side // using accessors (properties) for having an access to private filed
