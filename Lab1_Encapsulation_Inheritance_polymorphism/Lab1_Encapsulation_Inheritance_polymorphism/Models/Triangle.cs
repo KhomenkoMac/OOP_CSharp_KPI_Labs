@@ -2,7 +2,7 @@
 
 namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
-	public class Triangle : Polygon
+	public class Triangle : Polygon, IDisposable
 	{
 		private double _aSide; // encapsulation principle
 		public double A_Side // using accessors (properties) for having an access to private filed
@@ -99,6 +99,18 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 				return true;
 			}
 			return false;
+		}
+
+		public override void Dispose()
+		{
+			CleanUp(true);
+			GC.SuppressFinalize(this);
+		}
+
+		~Triangle()
+		{
+			CleanUp(false);
+			Console.WriteLine("destruct triangle");
 		}
 	}
 }

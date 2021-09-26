@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Threading;
 
 namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
 	public class Rectangle : Polygon
 	{
+
+		static int currentValue = 0; // for showing life time of instance
+		private int Id => currentValue;
+
+
 		private double _aSide; // encapsulation principle
 		public double A_Side // using accessors (properties) for having an access to private field
 		{
@@ -32,7 +38,8 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 
 		public Rectangle(double aSide, double bSide)
 		{
-			Console.WriteLine($"{nameof(Rectangle)} -> base ctor executed");
+			++currentValue;
+			Console.WriteLine($"{nameof(Rectangle)} -> base ctor {Id} executed");
 			_aSide = aSide;
 			_bSide = bSide;
 		}
@@ -42,6 +49,13 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 		private double CalcAreaOfRectangle()
 		{
 			return _aSide * _bSide;
+		}
+
+		~Rectangle()
+		{
+			CleanUp(false);
+			Console.WriteLine($"Destruct Rectangle {Id} Gen:{GC.GetGeneration(this)}");
+			Thread.Sleep(100);
 		}
 	}
 

@@ -1,6 +1,8 @@
-﻿namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
+﻿using System;
+
+namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
-	public class Parallelogram : Rectangle
+	public class Parallelogram : Rectangle, IDisposable
 	{
 		public Parallelogram(double aSide, double bSide) : base(aSide, bSide) 
 		{
