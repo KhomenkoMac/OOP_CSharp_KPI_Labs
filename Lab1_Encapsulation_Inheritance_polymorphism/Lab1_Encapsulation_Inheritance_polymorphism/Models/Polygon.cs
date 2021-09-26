@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
+﻿namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
-	public class Polygon
+	public abstract class Polygon
 	{
-		public virtual double SquareOfFigure { get; }
+		public virtual bool CanFindArea => true;
+		public abstract double AreaOfFigure { get; }
 	}
 }

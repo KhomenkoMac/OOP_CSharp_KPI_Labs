@@ -1,7 +1,7 @@
 ﻿namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
-	public class Parallelogram : Polygon
+	public class Parallelogram : Rectangle
 	{
-		public override double SquareOfFigure { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+		public Parallelogram(double aSide, double bSide) : base(aSide, bSide) { }
 	}
 }
