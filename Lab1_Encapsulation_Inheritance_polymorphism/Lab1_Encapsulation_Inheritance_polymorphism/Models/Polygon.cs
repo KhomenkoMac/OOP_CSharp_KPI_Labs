@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
-	public abstract class Polygon
+	public class Polygon
 	{
-		public abstract double SquareOfFigure { get; set; }
+		public virtual double SquareOfFigure { get; }
 	}
 }
