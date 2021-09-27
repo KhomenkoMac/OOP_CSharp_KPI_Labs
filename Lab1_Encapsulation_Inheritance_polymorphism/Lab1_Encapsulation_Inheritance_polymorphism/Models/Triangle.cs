@@ -65,22 +65,49 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 
 		public override double AreaOfFigure => CalcAreaOfTrinagle();
 
-		static Triangle() // static ctor
-		{
-			Console.WriteLine("Static ctor worked: {0}", nameof(Triangle));
-		}
+		//static Triangle() // static ctor
+		//{
+		//	Console.WriteLine("Static ctor worked: {0}", nameof(Triangle));
+		//}
 
-		public Triangle() // a default ctor
-		{
-			Console.WriteLine("Default ctor worked: {0}", nameof(Triangle));
-		}
+		//public Triangle() // a default ctor
+		//{
+		//	Console.WriteLine("Default ctor worked: {0}", nameof(Triangle));
+		//}
 
-		public Triangle(double a, double b, double c) // a parameterized ctor
+		//public Triangle(double a, double b, double c) // a parameterized ctor
+		//{
+		//	Console.WriteLine("Parameterized ctor worked: {0}", nameof(Triangle));
+		//	_aSide = a;
+		//	_bSide = b;
+		//	_cSide = c;
+		//}
+
+		private Triangle(double a, double b, double c)
 		{
-			Console.WriteLine("Parameterized ctor worked: {0}", nameof(Triangle));
 			_aSide = a;
 			_bSide = b;
 			_cSide = c;
+		}
+
+		public static Triangle CreateTriangle(double a, double b, double c)
+		{
+			if (!CheckTriangle(a,b,c))
+			{
+				return null;
+			}
+			return new Triangle(a, b, c);
+		}
+
+		private static bool CheckTriangle(double aSide, double bSide, double cSide)
+		{
+			if (aSide + bSide > cSide &&
+				bSide + cSide > aSide &&
+				cSide + aSide > bSide)
+			{
+				return true;
+			}
+			return false;
 		}
 
 		private double CalcAreaOfTrinagle()
@@ -100,6 +127,8 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 			}
 			return false;
 		}
+
+		
 
 		public override void Dispose()
 		{
