@@ -4,6 +4,13 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
 	public class Triangle : Polygon
 	{
+		public override event Action<Polygon> FigurePainted; // event
+
+
+
+		public override event Func<Point, Polygon, bool> FigureMoved;
+
+
 		private double _aSide; // encapsulation principle
 		public double A_Side // using accessors (properties) for having an access to private filed
 		{

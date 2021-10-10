@@ -3,8 +3,13 @@ using System;
 
 namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
+	public record Point(int x, int y);
+
 	public abstract class Polygon : IDisposable, IPaintable, IMoveable
 	{
+		public abstract event Action<Polygon> FigurePainted;
+		public abstract event Func<Point, Polygon, bool> FigureMoved;
+
 		public virtual bool CanFindArea => true;
 		public abstract double AreaOfFigure { get; }
 

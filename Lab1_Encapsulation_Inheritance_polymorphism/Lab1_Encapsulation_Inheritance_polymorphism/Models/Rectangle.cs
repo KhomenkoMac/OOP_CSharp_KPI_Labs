@@ -5,6 +5,10 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
 	public class Rectangle : Polygon
 	{
+		public override event Func<Point, Polygon, bool> FigureMoved; // event
+		
+		public override event Action<Polygon> FigurePainted; 
+
 
 		static int currentValue = 0; // for showing life time of instance
 		private int Id => currentValue;
@@ -54,6 +58,7 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 		public override void Paint()
 		{
 			Console.WriteLine($"Paint {nameof(Rectangle)}");
+			this.FigurePainted?.Invoke(this);
 		}
 
 		public override void Move(int x, int y)
