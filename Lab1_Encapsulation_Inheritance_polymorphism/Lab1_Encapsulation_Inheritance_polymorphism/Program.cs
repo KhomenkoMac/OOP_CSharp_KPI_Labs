@@ -29,6 +29,8 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism
 
 			//Triangle t1 = Triangle.CreateTriangle(3, 4, 5);
 			//Triangle t2 = Triangle.CreateTriangle(1, 2, 3);
+
+
 		}
 	}
 }
