@@ -1,4 +1,5 @@
-﻿using Lab1_Encapsulation_Inheritance_polymorphism.Models;
+﻿using Lab1_Encapsulation_Inheritance_polymorphism.ExceptionHierarchy;
+using Lab1_Encapsulation_Inheritance_polymorphism.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism
 			_avaliableFigures.Add(figure.Key, figure.Value);
 		}
 
-		public void MoveRectangle(int x, int y)
+		public void MoveRectangle(double x, double y)
 		{
 			_avaliableFigures.GetValueOrDefault(nameof(Rectangle))?.Move(x, y);
 		}
@@ -36,8 +37,8 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism
 			
 			c.AddAvalableFigure(new KeyValuePair<string, Polygon>(nameof(Rectangle), r));
 			
-			r.FigureMoved += new Func<Point, Polygon, bool>(OnMoved); // delegate func
-			r.FigurePainted += new Action<Polygon>(OnPaintedLog); // delegate action
+			//r.FigureMoved += new Func<Point, Polygon, bool>(OnMoved); // delegate func
+			//r.FigurePainted += new Action<Polygon>(OnPaintedLog); // delegate action
 			r.FigureMoved += delegate (Point location, Polygon sender)  // subscription using anonymus method
 			{ 
 				return OnMoved(location, sender); 
@@ -45,17 +46,52 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism
 			r.FigurePainted += (obj) => OnPaintedLog(obj); // subscription using labda-expression
 
 			c.PaintRectangle();
+			c.MoveRectangle(double.NaN, double.PositiveInfinity); // initiation of exception
 		}
 
 		private static bool OnMoved(Point location, Polygon senderObj) // event handler
 		{
-			if (!double.IsNaN(location.x) && !double.IsNaN(location.y))
-			{
-				Console.WriteLine( $"{senderObj.GetType()} has been moved at ({location.x};{location.y})");
-				return true;
-			}
+			//if (!double.IsNaN(location.x) && !double.IsNaN(location.y))
+			//{
+			//	Console.WriteLine( $"{senderObj.GetType()} has been moved at ({location.x};{location.y})");
+			//	return true;
+			//}
 
-			return false;
+			// code using app exception
+
+			try
+			{
+				if (double.IsNaN(location.x) || double.IsNaN(location.y))
+				{
+					throw new FigureNotMovedException(new FigureNotMovedExceptionArgs($"Figure is not moved due to invalid args!", null));
+				}
+
+				Console.WriteLine($"{senderObj.GetType()} has been moved at ({location.x};{location.y})");
+			}
+			catch (FigureNotMovedException e)
+			{
+				string output = $"{nameof(FigureNotMovedException)}:";
+
+				if (e.Source != null)
+				{
+					output += $" Source: {e.Source};";
+				}
+
+				if (e.Message != null)
+				{
+					output += $" Message: {e.Message};";
+				}
+				
+				if (e.InnerException != null)
+				{
+					output += $"Inner: {e.InnerException.Message};";
+				}
+
+
+				return false;
+			}
+			
+			return true;
 		}
 
 		private static void OnPaintedLog(Polygon senderObj)

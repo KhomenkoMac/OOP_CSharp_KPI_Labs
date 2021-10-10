@@ -61,9 +61,10 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 			this.FigurePainted?.Invoke(this);
 		}
 
-		public override void Move(int x, int y)
+		public override void Move(double x, double y)
 		{
 			Console.WriteLine($"Move {nameof(Rectangle)}");
+			this.FigureMoved?.Invoke(new Point(x, y), this);
 		}
 
 		~Rectangle()

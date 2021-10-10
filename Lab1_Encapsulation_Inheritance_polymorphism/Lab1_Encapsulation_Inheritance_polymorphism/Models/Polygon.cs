@@ -3,7 +3,7 @@ using System;
 
 namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
-	public record Point(int x, int y);
+	public record Point(double x, double y);
 
 	public abstract class Polygon : IDisposable, IPaintable, IMoveable
 	{
@@ -15,7 +15,7 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 
 		public abstract void Paint();
 
-		public abstract void Move(int x, int y);
+		public abstract void Move(double x, double y);
 
 		// dispose
 		private bool disposed = false;
