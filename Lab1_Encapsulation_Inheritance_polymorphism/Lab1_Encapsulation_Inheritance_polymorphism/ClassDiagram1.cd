@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Parallelogram">
-    <Position X="15" Y="5.5" Width="2.75" />
+    <Position X="15.5" Y="1.25" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAIAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Parallelogram.cs</FileName>
@@ -9,32 +9,39 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Polygon">
-    <Position X="10.75" Y="1.75" Width="1.5" />
+    <Position X="10.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAACAAAKAAAAAAAAAAAAAAAEAAAAAAAAAAAEAIAAA=</HashCode>
+      <HashCode>AAIAACAAAKAAAAAAAAAAAgAAAEAAAAAAAAAAAEAIAAA=</HashCode>
       <FileName>Models\Polygon.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Rectangle">
-    <Position X="12.5" Y="5" Width="1.5" />
+    <Position X="13" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAACACgAAIAAAAAAAAAAAAAAAAAAAABAEAAAAEAICAA=</HashCode>
+      <HashCode>gAACACgAAKAAAAAAAAAAAgAAAAAAAABAEAAAAEAICAA=</HashCode>
       <FileName>Models\Rectangle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Square">
-    <Position X="15" Y="7.5" Width="2.75" />
+    <Position X="15.5" Y="3.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Square.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.Models.Triangle">
-    <Position X="8.25" Y="5" Width="2.75" />
+    <Position X="7" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAACgAACAAAAAAAAAAAAgAAFAEAABAEAAAACEACAA=</HashCode>
+      <HashCode>AAAAACgAAKAAAAAAAAAAAggAAFAEAABAEAAAACEICAA=</HashCode>
       <FileName>Models\Triangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1_Encapsulation_Inheritance_polymorphism.ExceptionHierarchy.FigureNotMovedException">
+    <Position X="11.25" Y="5.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExceptionHierarchy\FigureNotMovedException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

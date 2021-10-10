@@ -7,13 +7,22 @@ using System.Threading;
 
 namespace Lab1_Encapsulation_Inheritance_polymorphism
 {
+	public static class Extensions //
+	{
+		public static void AddAvaliableFigure(this Dictionary<string,Polygon> dictionary, KeyValuePair<string, Polygon> figureForDict)
+		{
+			dictionary.Add(figureForDict.Key, figureForDict.Value);
+		}
+	}
+
+
 	public class Client
 	{
 		private Dictionary<string, Polygon> _avaliableFigures = new();
 
 		public void AddAvalableFigure(KeyValuePair<string,Polygon> figure)
 		{
-			_avaliableFigures.Add(figure.Key, figure.Value);
+			_avaliableFigures.AddAvaliableFigure(figure); // extension in use
 		}
 
 		public void MoveRectangle(double x, double y)
@@ -63,7 +72,8 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism
 			{
 				if (double.IsNaN(location.x) || double.IsNaN(location.y))
 				{
-					throw new FigureNotMovedException(new FigureNotMovedExceptionArgs($"Figure is not moved due to invalid args!", null));
+					throw new FigureNotMovedException(
+						new FigureNotMovedExceptionArgs($"Figure is not moved due to invalid args!", null));
 				}
 
 				Console.WriteLine($"{senderObj.GetType()} has been moved at ({location.x};{location.y})");
