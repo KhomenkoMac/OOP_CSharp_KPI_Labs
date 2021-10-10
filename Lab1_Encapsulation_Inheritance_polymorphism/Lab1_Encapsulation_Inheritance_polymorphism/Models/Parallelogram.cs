@@ -11,9 +11,9 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 			Console.WriteLine($"{nameof(Parallelogram)} -> derived ctor executed");
 		}
 
-		public void Move(int x, int y)
+		public override void Move(int x, int y)
 		{
-			Console.WriteLine($"the figure placed into ({x};{y})");
+			Console.WriteLine($"{nameof(Parallelogram)} placed into ({x};{y})");
 		}
 
 

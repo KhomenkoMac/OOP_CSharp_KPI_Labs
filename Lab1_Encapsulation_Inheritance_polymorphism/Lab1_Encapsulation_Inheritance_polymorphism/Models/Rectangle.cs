@@ -53,12 +53,12 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 
 		public override void Paint()
 		{
-			throw new NotImplementedException();
+			Console.WriteLine($"Paint {nameof(Rectangle)}");
 		}
 
 		public override void Move(int x, int y)
 		{
-			throw new NotImplementedException();
+			Console.WriteLine($"Move {nameof(Rectangle)}");
 		}
 
 		~Rectangle()

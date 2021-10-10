@@ -117,6 +117,7 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 			double area = Math.Sqrt(halfPerimeter * (halfPerimeter - _aSide) * (halfPerimeter - _bSide) * (halfPerimeter - _cSide)); //Heron's formula
 			return area;
 		}
+		
 		private bool CheckTriangle()
 		{
 			if (_aSide + _bSide > _cSide && 
@@ -134,6 +135,16 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 		{
 			CleanUp(true);
 			GC.SuppressFinalize(this);
+		}
+
+		public override void Paint()
+		{
+			Console.WriteLine($"Paint {nameof(Triangle)}");
+		}
+
+		public override void Move(int x, int y)
+		{
+			Console.WriteLine($"Move {nameof(Triangle)}");
 		}
 
 		~Triangle()
