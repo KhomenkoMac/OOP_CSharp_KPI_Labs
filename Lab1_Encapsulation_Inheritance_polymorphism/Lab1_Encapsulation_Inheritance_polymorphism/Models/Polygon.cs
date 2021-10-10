@@ -1,11 +1,16 @@
-﻿using System;
+﻿using Lab1_Encapsulation_Inheritance_polymorphism.interfaces;
+using System;
 
 namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 {
-	public abstract class Polygon : IDisposable
+	public abstract class Polygon : IDisposable, IPaintable, IMoveable
 	{
 		public virtual bool CanFindArea => true;
 		public abstract double AreaOfFigure { get; }
+
+		public abstract void Paint();
+
+		public abstract void Move(int x, int y);
 
 		// dispose
 		private bool disposed = false;
@@ -26,5 +31,6 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 			CleanUp(true);
 			GC.SuppressFinalize(this);
 		}
+		
 	}
 }

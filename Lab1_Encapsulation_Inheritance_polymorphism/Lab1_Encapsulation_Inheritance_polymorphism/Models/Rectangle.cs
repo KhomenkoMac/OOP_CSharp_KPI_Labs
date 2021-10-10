@@ -51,6 +51,16 @@ namespace Lab1_Encapsulation_Inheritance_polymorphism.Models
 			return _aSide * _bSide;
 		}
 
+		public override void Paint()
+		{
+			throw new NotImplementedException();
+		}
+
+		public override void Move(int x, int y)
+		{
+			throw new NotImplementedException();
+		}
+
 		~Rectangle()
 		{
 			CleanUp(false);
