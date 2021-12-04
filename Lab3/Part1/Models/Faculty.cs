@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Part1.Models
@@ -6,64 +7,29 @@ namespace Part1.Models
     public class Faculty : Component
     {
         public string FacultyName { get; set; }
-        public IEnumerable<Course> Courses { get; set; }
-
-        public override double Avg()
+        public Faculty(IEnumerable<Course> courses) : base(courses)
         {
-            foreach (var item in Courses)
-            {
-                ComponentsAverage += item.Avg();
-            }
-
-            return ComponentsAverage / Courses.Count();
+            this.Components = courses;
         }
     }
 
     public class Course : Component
     {
         public string CourseName { get; set; }
-        public IEnumerable<CourseStream> Streams { get; set; }
-
-        public override double Avg()
-        {
-            foreach (var item in Streams)
-            {
-                ComponentsAverage += item.Avg();
-            }
-
-            return ComponentsAverage / Streams.Count();
-        }
+        public Course(IEnumerable<CourseStream> streams) : base(streams) { }
     }
 
     public class CourseStream : Component
     {
         public string StreamName { get; set; }
-        public IEnumerable<Group> Groups { get; set; }
+        public CourseStream(IEnumerable<Group> groups) : base(groups) { }
 
-        public override double Avg()
-        {
-            foreach (var item in Groups)
-            {
-                ComponentsAverage += item.Avg();
-            }
-
-            return ComponentsAverage / Groups.Count();
-        }
     }
 
-    public class Group: Component
+    public class Group : Component
     {
         public string GroupName { get; set; }
-        public IEnumerable<Student> Students { get; set; }
-        public override double Avg()
-        {
-            foreach (var item in Students)
-            {
-                ComponentsAverage += item.Avg();
-            }
-
-            return ComponentsAverage / Students.Count();
-        }
+        public Group(IEnumerable<Component> students) : base(students) { }
     }
 
     public class Student : Component
@@ -73,9 +39,21 @@ namespace Part1.Models
         public string Middlename { get; set; }
         public IEnumerable<double> Grades { get; set; }
 
+        public Student() : base(null) { }
+
         public override double Avg()
         {
             return Grades.Average(g => g);
+        }
+
+        public override void Add(Component c)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Remove(Component c)
+        {
+            throw new NotImplementedException();
         }
     }
 }

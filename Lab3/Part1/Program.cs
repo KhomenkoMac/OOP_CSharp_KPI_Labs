@@ -6,161 +6,144 @@ namespace Part1
 {
     class Program
     {
-        private static Component InitFaculty()
+        private static Component InitFAM()
         {
-            return new Faculty
-            {
-                FacultyName = "FPM",
-                Courses = new List<Course>
+            return new Faculty(new List<Course>
                 {
-                    new Course
-                    {
-                        CourseName = "Computer system engineering",
-                        Streams = new List<CourseStream>
+                    new Course(new List<CourseStream>
                         {
-                            new CourseStream
-                            {
-                                StreamName = "KP-1x",
-                                Groups = new List<Group>
+                            new CourseStream(new List<Group>
                                 {
-                                    new Group
+                                    new Group(new List<Student>
+                                        {
+                                            new Student
+                                            {
+                                                Firstname = "Petro3",
+                                                Lastname = "Petrenko3",
+                                                Middlename = "Petrovych3",
+                                                Grades = new double[]{ 50, 100, 14, 78, 89, 56.5, 88.75 }
+                                            },
+                                            new Student
+                                            {
+                                                Firstname = "Petro4",
+                                                Lastname = "Petrenko4",
+                                                Middlename = "Petrovych4",
+                                                Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
+                                            },
+
+                                            new Student
+                                            {
+                                                Firstname = "Petro4",
+                                                Lastname = "Petrenko4",
+                                                Middlename = "Petrovych4",
+                                                Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
+                                            },
+                                        })
                                     {
                                         GroupName = "KP-11",
-                                        Students = new List<Student>
+                                    },
+
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
-                                                Firstname = "Petro3",
-                                                Lastname = "Petrenko3",
-                                                Middlename = "Petrovych3",
+                                                Firstname = "Petro1",
+                                                Lastname = "Petrenko1",
+                                                Middlename = "Petrovych1",
                                                 Grades = new double[]{ 50, 100, 14, 78, 89, 56.5, 88.75 }
                                             },
                                             new Student
                                             {
-                                                Firstname = "Petro4",
-                                                Lastname = "Petrenko4",
-                                                Middlename = "Petrovych4",
+                                                Firstname = "Petro2",
+                                                Lastname = "Petrenko2",
+                                                Middlename = "Petrovych2",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
 
                                             new Student
                                             {
-                                                Firstname = "Petro4",
-                                                Lastname = "Petrenko4",
-                                                Middlename = "Petrovych4",
+                                                Firstname = "Petro0",
+                                                Lastname = "Petrenko0",
+                                                Middlename = "Petrovych0",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-                                        }
-                                    },
-
-                                    new Group
+                                        })
                                     {
                                         GroupName = "KP-12",
-                                        Students = new List<Student>
+                                    }
+                                })
+                            {
+                                StreamName = "KP-1x",
+
+                            },
+
+                            new CourseStream(new List<Group>
+                                {
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
-                                                Firstname = "Petro1",
-                                                Lastname = "Petrenko1",
-                                                Middlename = "Petrovych1",
+                                                Firstname = "Petro3",
+                                                Lastname = "Petrenko3",
+                                                Middlename = "Petrovych3",
                                                 Grades = new double[]{ 50, 100, 14, 78, 89, 56.5, 88.75 }
                                             },
                                             new Student
                                             {
-                                                Firstname = "Petro2",
-                                                Lastname = "Petrenko2",
-                                                Middlename = "Petrovych2",
+                                                Firstname = "Petro4",
+                                                Lastname = "Petrenko4",
+                                                Middlename = "Petrovych4",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
 
                                             new Student
                                             {
-                                                Firstname = "Petro0",
-                                                Lastname = "Petrenko0",
-                                                Middlename = "Petrovych0",
+                                                Firstname = "Petro4",
+                                                Lastname = "Petrenko4",
+                                                Middlename = "Petrovych4",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-                                        }
-                                    }
-                                }
-                            },
-
-                            new CourseStream
-                            {
-                                StreamName = "KP-0x",
-                                Groups = new List<Group>
-                                {
-                                    new Group
+                                        })
                                     {
                                         GroupName = "KP-01",
-                                        Students = new List<Student>
+                                    },
+
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
-                                                Firstname = "Petro3",
-                                                Lastname = "Petrenko3",
-                                                Middlename = "Petrovych3",
+                                                Firstname = "Petro1",
+                                                Lastname = "Petrenko1",
+                                                Middlename = "Petrovych1",
                                                 Grades = new double[]{ 50, 100, 14, 78, 89, 56.5, 88.75 }
                                             },
                                             new Student
                                             {
-                                                Firstname = "Petro4",
-                                                Lastname = "Petrenko4",
-                                                Middlename = "Petrovych4",
+                                                Firstname = "Petro2",
+                                                Lastname = "Petrenko2",
+                                                Middlename = "Petrovych2",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
 
                                             new Student
                                             {
-                                                Firstname = "Petro4",
-                                                Lastname = "Petrenko4",
-                                                Middlename = "Petrovych4",
+                                                Firstname = "Petro0",
+                                                Lastname = "Petrenko0",
+                                                Middlename = "Petrovych0",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-                                        }
-                                    },
-
-                                    new Group
+                                        })
                                     {
                                         GroupName = "KP-02",
-                                        Students = new List<Student>
-                                        {
-                                            new Student
-                                            {
-                                                Firstname = "Petro1",
-                                                Lastname = "Petrenko1",
-                                                Middlename = "Petrovych1",
-                                                Grades = new double[]{ 50, 100, 14, 78, 89, 56.5, 88.75 }
-                                            },
-                                            new Student
-                                            {
-                                                Firstname = "Petro2",
-                                                Lastname = "Petrenko2",
-                                                Middlename = "Petrovych2",
-                                                Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
-                                            },
-
-                                            new Student
-                                            {
-                                                Firstname = "Petro0",
-                                                Lastname = "Petrenko0",
-                                                Middlename = "Petrovych0",
-                                                Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
-                                            },
-                                        }
                                     }
-                                }
+                                })
+                            {
+                                StreamName = "KP-0x",
                             },
 
-                            new CourseStream
-                            {
-                                StreamName = "KP-9x",
-                                Groups = new List<Group>
+                            new CourseStream(new List<Group>
                                 {
-                                    new Group
-                                    {
-                                        GroupName = "KP-91",
-                                        Students = new List<Student>
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
@@ -184,13 +167,12 @@ namespace Part1
                                                 Middlename = "Petrovych4",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-                                        }
+                                        })
+                                    {
+                                        GroupName = "KP-91",
                                     },
 
-                                    new Group
-                                    {
-                                        GroupName = "KP-92",
-                                        Students = new List<Student>
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
@@ -206,7 +188,6 @@ namespace Part1
                                                 Middlename = "Petrovych2",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-
                                             new Student
                                             {
                                                 Firstname = "Petro0",
@@ -214,28 +195,25 @@ namespace Part1
                                                 Middlename = "Petrovych0",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-                                        }
+                                        })
+                                    {
+                                        GroupName = "KP-92",
                                     }
-                                }
+                                })
+                            {
+                                StreamName = "KP-9x",
                             },
 
-                        }
+                        })
+                    {
+                        CourseName = "Computer system engineering",
                     },
 
-                    new Course
-                    {
-                        CourseName = "Applied Math",
-                        Streams = new List<CourseStream>
+                    new Course(new List<CourseStream>
                         {
-                            new CourseStream
-                            {
-                                StreamName = "KA-1x",
-                                Groups = new List<Group>
+                            new CourseStream(new List<Group>
                                 {
-                                    new Group
-                                    {
-                                        GroupName = "KA-11",
-                                        Students = new List<Student>
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
@@ -259,13 +237,12 @@ namespace Part1
                                                 Middlename = "Petrovych4",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-                                        }
+                                        })
+                                    {
+                                        GroupName = "KA-11",
                                     },
 
-                                    new Group
-                                    {
-                                        GroupName = "KA-12",
-                                        Students = new List<Student>
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
@@ -289,20 +266,18 @@ namespace Part1
                                                 Middlename = "Petrovych0",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-                                        }
+                                        })
+                                    {
+                                        GroupName = "KA-12",
                                     }
-                                }
+                                })
+                            {
+                                StreamName = "KA-1x",
                             },
 
-                            new CourseStream
-                            {
-                                StreamName = "KA-0x",
-                                Groups = new List<Group>
+                            new CourseStream(new List<Group>
                                 {
-                                    new Group
-                                    {
-                                        GroupName = "KA-01",
-                                        Students = new List<Student>
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
@@ -326,13 +301,12 @@ namespace Part1
                                                 Middlename = "Petrovych4",
                                                 Grades = new double[]{ 88.75, 0, 15 }
                                             },
-                                        }
+                                        })
+                                    {
+                                        GroupName = "KA-01",
                                     },
 
-                                    new Group
-                                    {
-                                        GroupName = "KA-02",
-                                        Students = new List<Student>
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
@@ -356,20 +330,18 @@ namespace Part1
                                                 Middlename = "Petrovych0",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-                                        }
+                                        })
+                                    {
+                                        GroupName = "KA-02",
                                     }
-                                }
+                                })
+                            {
+                                StreamName = "KA-0x",
                             },
 
-                            new CourseStream
-                            {
-                                StreamName = "KA-9x",
-                                Groups = new List<Group>
+                            new CourseStream(new List<Group>
                                 {
-                                    new Group
-                                    {
-                                        GroupName = "KA-91",
-                                        Students = new List<Student>
+                                    new Group(new List<Student>
                                         {
                                             new Student
                                             {
@@ -393,13 +365,12 @@ namespace Part1
                                                 Middlename = "Petrovych4",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-                                        }
+                                        })
+                                    {
+                                        GroupName = "KA-91",
                                     },
 
-                                    new Group
-                                    {
-                                        GroupName = "KA-92",
-                                        Students = new List<Student>
+                                    new Group(new List<Student>()
                                         {
                                             new Student
                                             {
@@ -423,20 +394,28 @@ namespace Part1
                                                 Middlename = "Petrovych0",
                                                 Grades = new double[]{ 14, 78, 56.5, 88.75 }
                                             },
-                                        }
+                                        })
+                                    {
+                                        GroupName = "KA-92",
                                     }
-                                }
+                                })
+                            {
+                                StreamName = "KA-9x",
                             },
 
-                        }
+                        })
+                    {
+                        CourseName = "Applied Math",
                     },
-                }
+                })
+            {
+                FacultyName = "FPM",
             };
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine($"{InitFaculty().Avg():f2}");
+            Console.WriteLine($"{InitFAM().Avg():f2}");
         }
     }
 }

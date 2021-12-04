@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Part1
 {
@@ -10,12 +8,33 @@ namespace Part1
     {
         protected double ComponentsAverage = 0;
 
-        public virtual double Avg()
+        protected IEnumerable<Component> Components;
+
+        public Component(IEnumerable<Component> components)
         {
-            throw new NotImplementedException();
+            Components = components;
         }
 
-        public virtual string Display()
+        public virtual void Add(Component c)
+        {
+            Components.ToList().Add(c);
+        }
+
+        public virtual void Remove(Component c)
+        {
+            Components.ToList().Remove(c);
+        }
+
+        public virtual double Avg()
+        {
+            foreach (var item in Components)
+            {
+                ComponentsAverage += item.Avg();
+            }
+            return ComponentsAverage / Components.Count();
+        }
+
+        public virtual void Display(int ident)
         {
             throw new NotImplementedException();
         }
