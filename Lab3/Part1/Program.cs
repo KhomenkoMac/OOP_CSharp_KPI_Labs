@@ -74,7 +74,6 @@ namespace Part1
                                 })
                             {
                                 StreamName = "KP-1x",
-
                             },
 
                             new CourseStream(new List<Group>
@@ -415,7 +414,11 @@ namespace Part1
 
         static void Main(string[] args)
         {
-            Console.WriteLine($"{InitFAM().Avg():f2}");
+            var FAM = InitFAM();
+            
+            FAM.Display(3);
+
+
         }
     }
 }

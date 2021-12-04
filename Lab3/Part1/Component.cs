@@ -10,6 +10,8 @@ namespace Part1
 
         protected IEnumerable<Component> Components;
 
+        public virtual string Naming => "undefined";
+
         public Component(IEnumerable<Component> components)
         {
             Components = components;
@@ -27,6 +29,7 @@ namespace Part1
 
         public virtual double Avg()
         {
+            ComponentsAverage = 0;
             foreach (var item in Components)
             {
                 ComponentsAverage += item.Avg();
@@ -36,7 +39,13 @@ namespace Part1
 
         public virtual void Display(int ident)
         {
-            throw new NotImplementedException();
+            ident += 3;
+            foreach (var item in Components)
+            {
+                Console.WriteLine($"{new String(' ', ident)}{item.Naming} - {item.Avg():f2}");
+                item.Display(ident);
+                Console.WriteLine();
+            }
         }
     }
 }
