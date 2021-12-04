@@ -6,7 +6,7 @@ namespace Part1
 {
     class Program
     {
-        private static Component InitFAM()
+        private static StudAnalyzeComponent InitFAM()
         {
             return new Faculty(new List<Course>
                 {
@@ -415,10 +415,7 @@ namespace Part1
         static void Main(string[] args)
         {
             var FAM = InitFAM();
-            
             FAM.Display(3);
-
-
         }
     }
 }

@@ -4,25 +4,25 @@ using System.Linq;
 
 namespace Part1
 {
-    public abstract class Component
+    public abstract class StudAnalyzeComponent // component defines general operations for simple and complex objects
     {
         protected double ComponentsAverage = 0;
 
-        protected IEnumerable<Component> Components;
+        protected IEnumerable<StudAnalyzeComponent> Components;
 
         public virtual string Naming => "undefined";
 
-        public Component(IEnumerable<Component> components)
+        public StudAnalyzeComponent(IEnumerable<StudAnalyzeComponent> components)
         {
             Components = components;
         }
 
-        public virtual void Add(Component c)
+        public virtual void Add(StudAnalyzeComponent c)
         {
             Components.ToList().Add(c);
         }
 
-        public virtual void Remove(Component c)
+        public virtual void Remove(StudAnalyzeComponent c)
         {
             Components.ToList().Remove(c);
         }
