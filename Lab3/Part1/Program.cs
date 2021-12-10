@@ -8,13 +8,13 @@ namespace Part1
     {
         private static StudAnalyzeComponent InitFAM()
         {
-            return new Faculty(new List<Course>
+            return new Composite(new List<Composite>
                 {
-                    new Course(new List<CourseStream>
+                    new Composite(new List<Composite>
                         {
-                            new CourseStream(new List<Group>
+                            new Composite(new List<Composite>
                                 {
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -40,10 +40,10 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KP-11",
+                                        Naming = "KP-11",
                                     },
 
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -69,16 +69,16 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KP-12",
+                                        Naming = "KP-12",
                                     }
                                 })
                             {
-                                StreamName = "KP-1x",
+                                Naming = "KP-1x",
                             },
 
-                            new CourseStream(new List<Group>
+                            new Composite(new List<Composite>
                                 {
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -104,10 +104,10 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KP-01",
+                                        Naming = "KP-01",
                                     },
 
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -123,7 +123,6 @@ namespace Part1
                                                 Middlename = "Petrovych2",
                                                 Grades = new double[]{ 50, 90, 14, 78, 89, 56.5, 88.75 }
                                             },
-
                                             new Student
                                             {
                                                 Firstname = "Petro0",
@@ -133,16 +132,16 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KP-02",
+                                        Naming = "KP-02",
                                     }
                                 })
                             {
-                                StreamName = "KP-0x",
+                                Naming = "KP-0x",
                             },
 
-                            new CourseStream(new List<Group>
+                            new Composite(new List<Composite>
                                 {
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -168,10 +167,10 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KP-91",
+                                        Naming = "KP-91",
                                     },
 
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -196,23 +195,23 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KP-92",
+                                        Naming = "KP-92",
                                     }
                                 })
                             {
-                                StreamName = "KP-9x",
+                                Naming = "KP-9x",
                             },
 
                         })
                     {
-                        CourseName = "Computer system engineering",
+                        Naming = "Computer system engineering",
                     },
 
-                    new Course(new List<CourseStream>
+                    new Composite(new List<Composite>
                         {
-                            new CourseStream(new List<Group>
+                            new Composite(new List<Composite>
                                 {
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -238,10 +237,10 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KA-11",
+                                        Naming = "KA-11",
                                     },
 
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -267,16 +266,16 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KA-12",
+                                        Naming = "KA-12",
                                     }
                                 })
                             {
-                                StreamName = "KA-1x",
+                                Naming = "KA-1x",
                             },
 
-                            new CourseStream(new List<Group>
+                            new Composite(new List<Composite>
                                 {
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -302,10 +301,10 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KA-01",
+                                        Naming = "KA-01",
                                     },
 
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -331,16 +330,16 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KA-02",
+                                        Naming = "KA-02",
                                     }
                                 })
                             {
-                                StreamName = "KA-0x",
+                                Naming = "KA-0x",
                             },
 
-                            new CourseStream(new List<Group>
+                            new Composite(new List<Composite>
                                 {
-                                    new Group(new List<Student>
+                                    new Composite(new List<Student>
                                         {
                                             new Student
                                             {
@@ -366,10 +365,10 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KA-91",
+                                        Naming = "KA-91",
                                     },
 
-                                    new Group(new List<Student>()
+                                    new Composite(new List<Student>()
                                         {
                                             new Student
                                             {
@@ -395,20 +394,20 @@ namespace Part1
                                             },
                                         })
                                     {
-                                        GroupName = "KA-92",
+                                        Naming = "KA-92",
                                     }
                                 })
                             {
-                                StreamName = "KA-9x",
+                                Naming = "KA-9x",
                             },
 
                         })
                     {
-                        CourseName = "Applied Math",
+                        Naming = "Applied Math",
                     },
                 })
             {
-                FacultyName = "FPM",
+                Naming = "FPM",
             };
         }
 

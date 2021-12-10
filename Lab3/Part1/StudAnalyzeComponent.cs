@@ -10,7 +10,7 @@ namespace Part1
 
         protected IEnumerable<StudAnalyzeComponent> Components;
 
-        public virtual string Naming => "undefined";
+        public virtual string Naming { get; set; }
 
         public StudAnalyzeComponent(IEnumerable<StudAnalyzeComponent> components)
         {
