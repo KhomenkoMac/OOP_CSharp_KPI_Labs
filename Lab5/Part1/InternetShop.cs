@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Part1
@@ -23,18 +22,18 @@ namespace Part1
         }
         public override void ShowGoods()
         {
-            sellerContext = new();
+            string authorOfMessage;
 
             DisplayInternetBuyingWays();
             switch ((InternetBuyingWays)AskForInteger("Choose buying way"))
             {
                 case InternetBuyingWays.ByCallToSupport:
-                    sellerContext.Seller = new TechSupport();
-                    sellerContext.Sellername = "099-999-99-99";
+                    seller = new TechSupport();
+                    authorOfMessage = "099-999-99-99";
                     break;
                 case InternetBuyingWays.ByWebSite:
-                    sellerContext.Seller = new WebPage();
-                    sellerContext.Sellername = "https://mus.shop.com";
+                    seller = new WebPage();
+                    authorOfMessage = "https://mus.shop.com";
                     break;
                 default:
                     throw new InvalidOperationException("There is no such buying way");
@@ -43,8 +42,7 @@ namespace Part1
             var goodsList = Avaliable_goods.ToList();
             for (int i = 0; i < goodsList.Count; i++)
             {
-                sellerContext.Message = $"{i + 1} - {goodsList[i]}";
-                sellerContext.ShowSellersMessage();
+                seller.Run(authorOfMessage, $"{i + 1} - {goodsList[i]}");
             }
         }
         

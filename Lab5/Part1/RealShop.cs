@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+﻿using System.Linq;
 
 namespace Part1
 {
@@ -14,14 +11,12 @@ namespace Part1
 
         public override void ShowGoods()
         {
-            sellerContext = new();
-            sellerContext.Seller = new Cashier();
+            seller = new Cashier();
 
             var goodsList = Avaliable_goods.ToList();
             for (int i = 0; i < goodsList.Count; i++)
             {
-                sellerContext.Message = $"{i + 1} - {goodsList[i]}";
-                sellerContext.ShowSellersMessage();
+                seller.Run($"{i + 1} - {goodsList[i]}");
             }
         }
     }

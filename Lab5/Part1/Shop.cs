@@ -7,7 +7,8 @@ namespace Part1
 {
     public abstract class Shop
     {
-        protected SellerContext sellerContext;
+        //protected SellerContext sellerContext;
+        protected Seller seller;
 
         protected enum DeliveryWay
         {
@@ -52,8 +53,7 @@ namespace Part1
         public abstract void ShowGoods();
         public virtual void GetClientPurchase(Client c)
         {
-            sellerContext.Message = "Make Choice";
-            sellerContext.ShowSellersMessage();
+            seller.Run("Make Choice");
 
             var goodsList = this.Avaliable_goods.ToList();
 
@@ -64,8 +64,7 @@ namespace Part1
         {
             decimal costSum = c.Cart.Sum(obj => obj.Price);
 
-            sellerContext.Message = $"For All: {costSum:f2}. Equip? (1- yes, 0 - no)";
-            sellerContext.ShowSellersMessage();
+            seller.Run($"For All: {costSum:f2}. Equip? (1- yes, 0 - no)");
 
             int choice = AskForInteger("Choice");
             if (choice != 1 && choice != 0)
@@ -121,10 +120,19 @@ namespace Part1
             goods.Clear();
         }
 
+        public void Run(Client c)
+        {
+            GreetCameClient(c);
+            ShowAdressInfo();
+            ShowGoods();
+            GetClientPurchase(c);
+            GetMoneyForGoods(c);
+            DeliverGoods(c.Cart);
+        }
+
         protected void DisplayClientBalance(Client c)
         {
-            sellerContext.Message = $"Balance is {c.Balance} UAH";
-            sellerContext.ShowSellersMessage();
+            seller.Run($"Balance is {c.Balance} UAH");
         }
 
         protected static void DisplayPaymentWays()

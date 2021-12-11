@@ -28,8 +28,7 @@ namespace Part1
                 Balance = 20000,
             };
 
-            ShopContext context = new();
-            context.Client = c;
+            Shop shop;
             
             do
             {
@@ -39,22 +38,16 @@ namespace Part1
                     switch (GetShopVisit())
                     {
                         case ShopVisit.Internet:
-                            context.Shop = new InternetShop();
+                            shop = new InternetShop();
                             break;
                         case ShopVisit.Real:
-                            context.Shop = new RealShop();
+                            shop = new RealShop();
                             break;
                         default:
                             throw new InvalidOperationException("Invalid choice!");
                     }
 
-                    context.GreetCameClient();
-                    context.ShowAdressInfo();
-                    context.ShowGoods();
-                    context.GetClientPurchase();
-                    context.GetMoneyForGoods();
-                    context.DeliverGoods();
-
+                    shop.Run(c);
                 }
                 catch (Exception err)
                 {

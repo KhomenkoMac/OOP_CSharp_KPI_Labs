@@ -59,6 +59,8 @@ namespace TempleteMethod
                         default:
                             throw new InvalidOperationException("Invalid choice!");
                     }
+
+                    shop.Run();
                 }
                 catch (Exception err)
                 {
