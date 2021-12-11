@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Part1.CardPayment" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CardPayment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Part1.Cashier">
+    <Position X="4" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cashier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.CashPayment" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CashPayment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Part1.Client">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAQgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.CourierDelivery" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CourierDelivery.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Part1.DeliveryContext">
+    <Position X="14.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACg=</HashCode>
+      <FileName>DeliveryContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.Good">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Good.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.InternetShop">
+    <Position X="16.5" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Part1.InternetShop.InternetBuyingWays" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>InternetShop.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>InternetShop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.PaymentContext">
+    <Position X="10.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAkAAAIIAAIAAEAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>PaymentContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.RealShop">
+    <Position X="12.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RealShop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.SelfPickingDelivery" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SelfPickingDelivery.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Part1.Seller" Collapsed="true">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Seller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.SellerContext">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAMAAAIAAACAA=</HashCode>
+      <FileName>SellerContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.Shop">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Part1.Shop.DeliveryWay" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Shop.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Part1.Shop.PaymentWays" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Shop.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAAQAAAAACAAAABAQAABACAAAgBAQAAAABAAABQQABA=</HashCode>
+      <FileName>Shop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.ShopContext">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAYAAAAAAAAAEAAQAABAAAAAgCAAAAAAAAAAAQAABQ=</HashCode>
+      <FileName>ShopContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.TechSupport">
+    <Position X="6.25" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TechSupport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Part1.WebPage">
+    <Position X="8.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Part1.IDelivery">
+    <Position X="16.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDelivery.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Part1.Payment">
+    <Position X="12.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Payment.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
